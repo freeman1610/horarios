@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>Horarios Sarec</title>
+    <link rel="shortcut icon" href="../img/iconiut.png" type="image/x-icon">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col-12">
+                <img class="img-fluid" src="../img/banneriut.png" alt="UPTAI">
+            </div>
+        </div>
+        <div class="row">
+            <h2 class="h2">Horarios 2.0</h2>
+        </div>
+        <div class="row d-flex justify-content-between mt-3">
+            <div class="col-xl-auto mb-3 col-md-12">
+                <label for="selectSede">Seleccione su Sede</label>
+                <select class="form-select" id="selectSede" onchange="cargarSecciones(this)">
+                    <option value="">Seleccione</option>
+                </select>
+            </div>
+            <div class="col-xl-auto mb-3 col-md-12">
+                <label for="selecSeccion">Seleccione su Sección</label>
+                <select class="form-select" id="selecSeccion" disabled="disabled" onchange="cargarContenido()">
+                    <option value="">Seleccione</option>
+                </select>
+            </div>
+            <div class="col-xl-auto mb-3 col-md-12">
+                <label for="">Seleccione el turno</label>
+                <select class="form-select" id="selectTurno" disabled="disabled" onchange="cargarContenido()">
+                    <option value="">Seleccione</option>
+                    <option value="diurno">Diurno</option>
+                    <option value="nocturno">Nocturno</option>
+                </select>
+            </div>
+            <div class="col-xl-auto mb-3 col-md-12">
+                <label for="">Seleccione la Semena</label>
+                <select class="form-select" id="selectSemana" disabled onchange="cargarContenido()">
+                    <option value="">Seleccione</option>
+                </select>
+            </div>
+            <div class="col-auto d-flex align-items-center">
+                <a href="../login/index.php" class="btn btn-success">Iniciar Sesión</a>
+            </div>
+        </div>
+        <div class="row  mt-3">
+            <div class="col-12">
+                <h3 class="h3 d-none" id="titleTableMateria"></h3>
+                <div class="table-responsive">
+                    <table class="table d-none" id="tabla1">
+                        <thead>
+                            <tr>
+                                <th>Codigo</th>
+                                <th>Materia</th>
+                                <th>Profesor</th>
+                                <th>Unidades de Credito</th>
+                                <th>Horas</th>
+                                <th>Semanas</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbodyTablaMaterias1"></tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-12">
+                <div class="table-responsive">
+                    <table class="table d-none" id="tabla2">
+                        <thead>
+                            <tr>
+                                <th style="width: 150px" class="bg-primary text-white">Hora</th>
+                                <th class="bg-info text-white">Lunes</th>
+                                <th class="bg-info text-white">Martes</th>
+                                <th class="bg-info text-white">Miércoles</th>
+                                <th class="bg-info text-white">Jueves</th>
+                                <th class="bg-info text-white">Viernes</th>
+                                <th class="bg-warning text-white">Sabado</th>
+                                <th class="bg-warning text-white">Domingo</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbodyTablaMaterias2"></tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <footer class="mt-auto text-center text-white bg-info fs-5">
+        <div class="text-center p-3">
+            Desarrollado Por José Manuel González Arciniegas © 2023
+        </div>
+    </footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="js.js">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+
+</html>
